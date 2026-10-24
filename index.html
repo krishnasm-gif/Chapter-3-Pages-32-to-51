@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 8 Physics - Chapter 3: Synthetic Fibres and Plastics (Complete Portal, Exercises & Experiments)</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #059669;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --border: #cbd5e1;
+            --accent: #d97706;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Full Screen Login Overlay */
+        #visitor-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .school-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .login-card h2 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .login-card p {
+            color: #64748b;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #334155;
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary);
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Main Content Container (Hidden until login) */
+        #main-content {
+            display: none;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 80px;
+        }
+
+        /* Top Nav */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 12px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .top-nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: #eff6ff;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .top-nav a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Session Header Bar */
+        .session-bar {
+            background: #eff6ff;
+            border: 1px solid var(--primary);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-top: 70px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        /* Section Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-top: 5px solid var(--primary);
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        h2 {
+            color: #1e293b;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        p, li {
+            margin-bottom: 12px;
+            color: #475569;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* Telugu Long Descriptions */
+        .telugu-desc {
+            background: #f0fdf4;
+            border-left: 4px solid var(--secondary);
+            padding: 15px;
+            margin: 12px 0 20px 0;
+            border-radius: 0 8px 8px 0;
+            color: #166534;
+            font-size: 1rem;
+        }
+
+        .telugu-desc strong {
+            color: #14532d;
+        }
+
+        /* Pronunciation styling under left side term */
+        .term-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .eng-term {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pronunciation-telugu {
+            font-size: 0.85rem;
+            color: #d97706;
+            margin-top: 3px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Q&A Boxes */
+        .qa-box {
+            background: #fffbeb;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .qa-box p.question {
+            font-weight: bold;
+            color: #b45309;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        /* Scroll to Top */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px 18px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 999;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        #scrollTopBtn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        @media(max-width: 768px) {
+            .card {
+                padding: 20px;
+            }
+            .login-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Visitor Login Overlay (Mandatory First Step) -->
+    <div id="visitor-overlay">
+        <div class="login-card">
+            <div class="school-title">JACOB GAPP SCHOOL</div>
+            <h2>Student Portal Login</h2>
+            <p>Please enter your student name and roll number to unlock Chapter 3 portal.</p>
+            <div class="form-group">
+                <label for="visitorName">Student Name:</label>
+                <input type="text" id="visitorName" placeholder="Balaswamy">
+            </div>
+            <div class="form-group">
+                <label for="visitorRoll">Roll Number / ID:</label>
+                <input type="text" id="visitorRoll" placeholder="e.g., 8054">
+            </div>
+            <button class="btn" onclick="submitVisitorLogin()">Enter Portal & Start Timer</button>
+        </div>
+    </div>
+
+    <!-- Top Navigation Menu -->
+    <nav class="top-nav">
+        <a href="#ch3-main">Ch 3 Overview</a>
+        <a href="#ch3-glossary">Ch 3 Glossary (160+)</a>
+        <a href="#ch3-exercises">Exercises & Q&A</a>
+        <a href="#ch3-experiments">Suggested Experiments</a>
+        <a href="#ch3-projects">Suggested Projects</a>
+    </nav>
+
+    <!-- Main Portal Content -->
+    <div id="main-content">
+
+        <!-- Active Session Info Bar -->
+        <div class="session-bar">
+            <span>School: <strong>JACOB GAPP SCHOOL</strong> | Student: <strong id="showName"></strong> (Roll: <strong id="showRoll"></strong>)</span>
+            <span>Session Time: <strong id="timerCounter">0</strong> seconds</span>
+        </div>
+
+        <!-- ================= CHAPTER 3: SYNTHETIC FIBRES AND PLASTICS ================= -->
+        <div id="ch3-main" class="card">
+            <h1>Chapter 3: Synthetic Fibres and Plastics (కృత్రిమ దారాలు మరియు ప్లాస్టిక్స్)</h1>
+            
+            <h2>1. Introduction to Natural & Synthetic Fibres</h2>
+            <p>We use clothes made from natural fibres like cotton, silk, and wool obtained from plants and animals. In contrast, synthetic fibres like polyester, nylon, and acrylic are man-made and produced using raw materials obtained from petroleum (petrochemicals).</p>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> మనం పత్తి, పట్టు, ఉన్ని వంటి సహజ దారాలతో తయారైన బట్టలను వాడుతాం. అయితే పాలిస్టర్, నైలాన్, అక్ర్రిలిక్ వంటి కృత్రిమ దారాలు పెట్రోలియం రసాయనాల (పెట్రోకెమికల్స్) నుండి మానవుల చేత తయారు చేయబడతాయి.
+            </div>
+
+            <h2>2. What is a Polymer?</h2>
+            <p>Synthetic fibres are made of chain-like structures formed by joining small units called monomers. A large single unit made by combining many identical monomers is called a polymer. The word 'poly' means many and 'mer' means part/unit.</p>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> కృత్రిమ దారాలు గొలుసు లాంటి నిర్మాణాన్ని కలిగి ఉంటాయి. చిన్న చిన్న ప్రమాణాలను 'మానోమర్లు' అంటారు. ఇలాంటి అనేక మానోమర్లు కలసి పెద్ద గొలుసు లాంటి 'పాలిమర్' ఏర్పడుతుంది. గ్రీకు భాషలో 'పాలి' అనగా అనేక, 'మెర్' అనగా భాగం అని అర్థం.
+            </div>
+
+            <h2>3. Major Synthetic Fibres (Nylon, Rayon, Acrylic, Polyester)</h2>
+            <ul>
+                <li><strong>Nylon:</strong> The first fully processed synthetic fibre made from coal, water, and air. It is strong, elastic, light, and lustrous.</li>
+                <li><strong>Rayon:</strong> Artificial silk made from plant wood pulp (cellulose) treated with chemicals like sodium hydroxide and carbon disulphide.</li>
+                <li><strong>Acrylic:</strong> Artificial wool ('fake fur') used for winter wear like sweaters and blankets, produced cheaply from petrochemicals.</li>
+                <li><strong>Polyester:</strong> Commonly used synthetic fibre (such as terylene) that remains wrinkle-free and crisp, widely blended with cotton or wool.</li>
+            </ul>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> 1. నైలాన్: బొగ్గు, నీరు, గాలి నుండి తయారైన మొదటి పూర్తి కృత్రిమ దారం. 2. రేయాన్: కర్ర గుజ్జు (సెల్యులోజ్) నుండి రసాయన పద్ధతి ద్వారా తయారు చేసే కృత్రిమ పట్టు. 3. అక్ర్రిలిక్: సహజ ఉన్ని వలె ఉండే కృత్రిమ ఉన్ని. 4. పాలిస్టర్: ముడతలు పడని, సులభంగా ఉతికే వీలైన దారం.
+            </div>
+
+            <h2>4. Plastics and their Types</h2>
+            <p>Plastics are polymers whose monomers can be arranged in linear or cross-linked chains. They are classified into <strong>Thermoplastics</strong> (which deform easily on heating, e.g., polythene, PVC) and <strong>Thermosetting Plastics</strong> (which once moulded cannot be softened by heating, e.g., Bakelite, melamine).</p>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> ప్లాస్టిక్స్ కూడా పాలిమర్లే. ఇవి రెండు రకాలు: 1. థర్మోప్లాస్టిక్స్ - వేడి చేస్తే సులభంగా ఆకారం మరువబడేవి (ఉదా: పాలిథీన్, PVC). 2. థర్మోసెట్టింగ్ ప్లాస్టిక్స్ - ఒకసారి తయారు చేశాక తిరిగి వేడి చేసినా కరగనివి (ఉదా: బెలకైట్, మెలమైన్).
+            </div>
+
+            <h2>5. Environmental Impact & The 4R Principle</h2>
+            <p>Plastics take several years to decompose, making them non-biodegradable and hazardous pollutants that choke lakes, drains, and harm animals. To protect our environment, we must follow the 4R principle: <strong>Reduce, Reuse, Recycle, and Recover</strong>.</p>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> ప్లాస్టిక్స్ కుళ్ళిపోవడానికి వందలాది సంవత్సరాలు పడుతుంది, దీనివల్ల పర్యావరణ కాలుష్యం ఏర్పడుతుంది. పర్యావరణాన్ని రక్షించడానికి 'తగ్గించు, పునర్వినియోగించు, పునర్వినియోగం చేయి, పునరుద్ధరించు' (4R సూత్రం) పాటించాలి.
+            </div>
+        </div>
+
+        <!-- ================= CHAPTER 3 GLOSSARY (160+ TERMS) ================= -->
+        <div id="ch3-glossary" class="card">
+            <h1>Chapter 3: Comprehensive Glossary & Vocabulary (160+ Terms)</h1>
+            <p>Explore all key technical terms from Chapter 3 with English terms, Telugu pronunciation underneath, and bilingual definitions/examples.</p>
+            <table>
+                <tr>
+                    <th>Term (English)</th>
+                    <th>Definition & Bilingual Example</th>
+                </tr>
+                <tr><td><div class="term-container"><span class="eng-term">1. Acrylic</span><span class="pronunciation-telugu">అక్ర్రిలిక్ (కృత్రిమ ఉన్ని)</span></div></td><td>Synthetic fibre resembling wool. Example: Acrylic sweater / ఉదా: అక్ర్రిలిక్ స్వెట్టర్ (చలికాలంలో వేడినిచ్చే గుడ్డ).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">2. Synthetic Fibre</span><span class="pronunciation-telugu">సింథటిక్ ఫైబర్ (కృత్రిమ దారం)</span></div></td><td>Man-made petrochemical fibre. Example: Nylon rope / ఉదా: నైలాన్ తాడు (బలంగా ఉండే కృత్రిమ దారం).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">3. Bakelite</span><span class="pronunciation-telugu">బెలకైట్ (థర్మోసెట్టింగ్ ప్లాస్టిక్)</span></div></td><td>Thermosetting plastic for switches. Example: Plug top / ఉదా: ఎలక్ట్రిక్ స్విచ్ బోర్డు (వేడికి కరగని ప్లాస్టిక్).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">4. Biodegradable</span><span class="pronunciation-telugu">బైయో-డిగ్రేడబుల్ (కుళ్ళిపోయే పదార్థం)</span></div></td><td>Decomposed by natural bacteria. Example: Fruit peel / ఉదా: పండ్ల తొక్క (భూమిలో త్వరగా కలిసిపోయేది).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">5. Blend</span><span class="pronunciation-telugu">బ్లెండ్ (మిశ్రమ దారం)</span></div></td><td>Mix of two or more fibres. Example: Terricot cloth / ఉదా: టెర్రికాట్ బట్ట (రెండు దారాల మిశ్రమం).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">6. Cellulose</span><span class="pronunciation-telugu">సెల్యులోజ్ (మొక్కల పీచు పదార్థం)</span></div></td><td>Plant cell wall material. Example: Wood pulp cellulose / ఉదా: కర్ర గుజ్జు (మొక్కల నుండి వచ్చే పీచు).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">7. Melamine</span><span class="pronunciation-telugu">మెలమైన్ (అగ్గిని తట్టుకునే ప్లాస్టిక్)</span></div></td><td>Fire-resistant plastic. Example: Unbreakable dinner plate / ఉదా: మెలమైన్ ప్లేట్ (అగ్నికి కరగని గిన్నె).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">8. Natural Fibres</span><span class="pronunciation-telugu">నాచురల్ ఫైబర్స్ (సహజ దారాలు)</span></div></td><td>Fibres from plants/animals. Example: Cotton and wool / ఉదా: పత్తి మరియు ఉన్ని (ప్రకృతి సిద్దమైనవి).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">9. Non-biodegradable</span><span class="pronunciation-telugu">నాన్-బైయో-డిగ్రేడబుల్ (కుళ్ళని పదార్థం)</span></div></td><td>Not decomposed naturally. Example: Plastic carry bag / ఉదా: ప్లాస్టిక్ కవర్ (సంవత్సరాల తరబడి చెడిపోనిది).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">10. Nylon</span><span class="pronunciation-telugu">నైలాన్ (నైలాన్ దారం)</span></div></td><td>First fully synthetic fibre. Example: Parachute rope / ఉదా: పారాచూట్ తాడు (అత్యంత బరువైన బరువును మోసేది).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">11. Petrochemicals</span><span class="pronunciation-telugu">పెట్రోకెమికల్స్ (పెట్రోలియం రసాయనాలు)</span></div></td><td>Chemicals derived from petroleum. Example: Raw material for plastics / ఉదా: ప్లాస్టిక్ తయారీకి వాడే ముడి రసాయనాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">12. Plastics</span><span class="pronunciation-telugu">ప్లాస్టిక్స్ (ప్లాస్టిక్ పదార్థాలు)</span></div></td><td>Mouldable polymer materials. Example: Water bucket / ఉదా: నీటి బకెట్ (ఏ ఆకారానికైనా మార్చగలిగేది).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">13. Polymer</span><span class="pronunciation-telugu">పాలిమర్ (బహుమారక అణువు)</span></div></td><td>Large chain molecule. Example: Polythene chain / ఉదా: పాలిథీన్ గొలుసు అణువు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">14. Polyamide</span><span class="pronunciation-telugu">పాలిమైడ్ (నైలాన్ రసాయన యూనిట్)</span></div></td><td>Polymer unit in nylon. Example: Nylon polymer chain / ఉదా: నైలాన్ తయారీలో ఉండే గొలుసు అణువు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">15. Polythene</span><span class="pronunciation-telugu">పాలిథీన్ (పాలిథీన్ కవర్)</span></div></td><td>Thermoplastic polymer of ethylene. Example: Carry bags / ఉదా: కిరాణా సరుకులు తెచ్చే పాలిథీన్ కవర్లు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">16. Polyester</span><span class="pronunciation-telugu">పాలిస్టర్ (పాలిస్టర్ దారం)</span></div></td><td>Ester monomer polymer. Example: Terylene shirt / ఉదా: టెరిలీన్ చొక్కా (ముడతలు పడనిది).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">17. Rayon</span><span class="pronunciation-telugu">రేయాన్ (కృత్రిమ పట్టు)</span></div></td><td>Regenerated cellulose fibre. Example: Artificial silk sari / ఉదా: కృత్రిమ పట్టు చీర (పట్టు లాగే మెరిసేది).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">18. Recycling</span><span class="pronunciation-telugu">రీసైక్లింగ్ (పునర్వినియోగ తయారీ)</span></div></td><td>Processing waste into new items. Example: Recycled plastic toys / ఉదా: పాత ప్లాస్టిక్‌తో కొత్త ఆటవస్తువులు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">19. Spinneret</span><span class="pronunciation-telugu">స్పిన్నెట్ (రంధ్రాల లోహ పలక)</span></div></td><td>Plate with tiny holes for fibre extrusion. Example: Nylon spinning plate / ఉదా: దారాలు తయారు చేసే సూక్ష్మ రంధ్రాల పలక.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">20. Terricot</span><span class="pronunciation-telugu">టెర్రికాట్ (టెరిలీన్ + పత్తి మిశ్రమం)</span></div></td><td>Blend of terylene and cotton. Example: School uniform shirt / ఉదా: పాఠశాల యూనిఫాం బట్ట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">21. Terylene</span><span class="pronunciation-telugu">టెరిలీన్ (టెరిలీన్ దారం)</span></div></td><td>Popular polyester fibre. Example: Synthetic dress material / ఉదా: బట్టల తయారీకి వాడే పాలిస్టర్ దారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">22. Terriwool</span><span class="pronunciation-telugu">టెర్రిఉన్ని (టెరిలీన్ + ఉన్ని మిశ్రమం)</span></div></td><td>Blend of terylene and wool. Example: Winter coat fabric / ఉదా: చలికాలపు కోట్ బట్ట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">23. Thermoplastics</span><span class="pronunciation-telugu">థర్మోప్లాస్టిక్స్ (వేడి చేస్తే కరిగే ప్లాస్టిక్)</span></div></td><td>Plastics softening on heating. Example: Plastic comb / ఉదా: ప్లాస్టిక్ దువ్వెన (వేడి చేస్తే మెత్తబడేది).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">24. Thermosetting Plastics</span><span class="pronunciation-telugu">థర్మోసెట్టింగ్ ప్లాస్టిక్స్ (వేడి చేస్తే కరగని ప్లాస్టిక్)</span></div></td><td>Plastics not softening on reheating. Example: Electric switch / ఉదా: కరెంట్ స్విచ్ బోర్డు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">25. Universal Recycling Symbol</span><span class="pronunciation-telugu">యూనివర్సల్ రీసైక్లింగ్ సింబల్ (సార్వత్రిక పునర్వినియోగ గుర్తు)</span></div></td><td>Chasing arrows triangle icon. Example: Symbol on plastic containers / ఉదా: బాణాల గుర్తింపు త్రిభుజ చిహ్నం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">26. Monomer</span><span class="pronunciation-telugu">మానోమర్ (ఏక యూనిట్ అణువు)</span></div></td><td>Small repeating single unit. Example: Ethylene molecule / ఉదా: పాలిమర్‌ను ఏర్పరిచే చిన్న అణువు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">27. Viscose</span><span class="pronunciation-telugu">విస్కోస్ (రేయాన్ ద్రవ రూపం)</span></div></td><td>Syrupy cellulose solution. Example: Raw rayon syrup / ఉదా: రేయాన్ దారాలు తీసే చిక్కని ద్రావణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">28. PET</span><span class="pronunciation-telugu">పెట్ (పాలిథీన్ టెరెఫ్తాలేట్)</span></div></td><td>Polyethylene terephthalate plastic. Example: Soda water bottle / ఉదా: కూల్‌డ్రింక్ ప్లాస్టిక్ బాటిల్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">29. HDPE</span><span class="pronunciation-telugu">హెచ్‌డిపిఇ (అధిక సాంద్రత పాలిథీన్)</span></div></td><td>High density polyethylene. Example: Milk gallon jug / ఉదా: పాలు నిల్వ చేసే గట్టి డబ్బా.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">30. PVC</span><span class="pronunciation-telugu">పివిసి (పాలీవినైల్ క్లోరైడ్)</span></div></td><td>Polyvinyl chloride plastic. Example: Water plumbing pipe / ఉదా: ఇళ్లలో వాడే నీటి ప్లాస్టిక్ పైపులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">31. LDPE</span><span class="pronunciation-telugu">ఎల్డిపిఇ (అల్ప సాంద్రత పాలిథీన్)</span></div></td><td>Low density polyethylene. Example: Squeezable sauce bottle / ఉదా: సులభంగా నొక్కే సాస్ బాటిల్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">32. PP</span><span class="pronunciation-telugu">పిపి (పాలిప్రొపిలిన్)</span></div></td><td>Polypropylene plastic. Example: Bottle caps / ఉదా: సీసాల మూతలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">33. PS</span><span class="pronunciation-telugu">పిఎస్ (పాలిస్టైరిన్)</span></div></td><td>Polystyrene plastic. Example: Disposable coffee cup / ఉదా: ఒక్కసారి వాడే టీ కప్పులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">34. Resin Identification Code</span><span class="pronunciation-telugu">రెసిన్ ఐడెంటిఫికేషన్ కోడ్ (ప్లాస్టిక్ రకపు కోడ్ సంఖ్య)</span></div></td><td>Number inside recycling triangle. Example: Code 1 for PET / ఉదా: రీసైకిల్ త్రిభుజంలో ఉండే నంబర్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">35. Parkesine</span><span class="pronunciation-telugu">పార్కసిన్ (మొట్టమొదటి కృత్రిమ ప్లాస్టిక్)</span></div></td><td>First semi-synthetic plastic. Example: Alexander Parkes invention / ఉదా: 1862లో కనుగొన్న మొదటి ప్లాస్టిక్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">36. Incineration</span><span class="pronunciation-telugu">ఇన్సినిరేషన్ (చెత్తను దహనం చేయుట)</span></div></td><td>Burning waste at high temperature. Example: Municipal waste burning / ఉదా: నగర చెత్తను ఉష్ణోగ్రత ద్వారా కాల్చడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">37. Landfill</span><span class="pronunciation-telugu">ల్యాండ్‌ఫిల్ (భూమిలో పూడ్చిపెట్టుట)</span></div></td><td>Burying garbage underground. Example: City waste dumping pit / ఉదా: చెత్తను నేలలో పెద్ద గొయ్యి తీసి పూడ్చడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">38. 4R Principle</span><span class="pronunciation-telugu">ఫోర్ ఆర్ ప్రిన్సిపుల్ (నాలుగు రామర్ల సూత్రం)</span></div></td><td>Reduce, Reuse, Recycle, Recover. Example: Eco-friendly waste management / ఉదా: పర్యావరణ పరిరక్షణ నియమాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">39. Reduce</span><span class="pronunciation-telugu">రిడ్యూస్ (వినియోగం తగ్గించుట)</span></div></td><td>Minimizing plastic usage. Example: Carrying cloth bags / ఉదా: ప్లాస్టిక్ సంచుల బదులు గుడ్డ సంచులు వాడటం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">40. Reuse</span><span class="pronunciation-telugu">రీయూజ్ (పునర్వినియోగం)</span></div></td><td>Using items repeatedly. Example: Refilling water bottles / ఉదా: ప్లాస్టిక్ బాటిల్‌ను మళ్లీ మంచి నీళ్లకు వాడటం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">41. Recover</span><span class="pronunciation-telugu">రికవర్ (శక్తి/వనరుల పునరుద్ధరణ)</span></div></td><td>Extracting energy from waste. Example: Waste-to-energy plant / ఉదా: చెత్త నుండి విద్యుత్ తయారు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">42. Carbon Disulphide</span><span class="pronunciation-telugu">కార్బన్ డైసల్ఫైడ్ (ఒక రసాయనం)</span></div></td><td>Solvent used in rayon making. Example: Dissolving wood cellulose / ఉదా: రేయాన్ తయారీలో సెల్యులోజ్‌ను కరిగించే ద్రావకం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">43. Sodium Hydroxide</span><span class="pronunciation-telugu">సోడియం హైడ్రాక్సైడ్ (కాస్టిక్ సోడా)</span></div></td><td>Alkaline chemical agent. Example: Rayon chemical treatment / ఉదా: రేయాన్ తయారీకి కలిపే క్షార రసాయనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">44. Dilute Sulfuric Acid</span><span class="pronunciation-telugu">డైల్యూట్ సల్ఫ్యూరిక్ ఆమ్లం (పల్చని సల్ఫ్యూరిక్ ఆమ్లం)</span></div></td><td>Acid bath for viscose coagulation. Example: Solidifying rayon threads / ఉదా: రేయాన్ దారాలను గట్టిపరచడానికి వాడే ఆమ్లం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">45. Adipic Acid</span><span class="pronunciation-telugu">అడిపిక్ ఆమ్లం (నైలాన్ మోనోమర్)</span></div></td><td>Monomer used for nylon synthesis. Example: Polyamide ingredient / ఉదా: నైలాన్ తయారీలో ఉపయోగపడే ఆమ్లం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">46. Hexamethylene Diamine</span><span class="pronunciation-telugu">హెక్సమెథిలిన్ డయామైన్ (నైలాన్ మోనోమర్)</span></div></td><td>Amine monomer for nylon. Example: Nylon manufacturing raw material / ఉదా: నైలాన్ దారాల తయారీకి కావాల్సిన రసాయనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">47. Terephthalic Acid</span><span class="pronunciation-telugu">టెరెఫ్తాలిక్ ఆమ్లం (పాలిస్టర్ ముడి పదార్థం)</span></div></td><td>Acid component for polyester. Example: Polyester reaction base / ఉదా: పాలిస్టర్ తయారీలో ముఖ్యమైన ఆమ్లం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">48. Dihydric Alcohol</span><span class="pronunciation-telugu">డైహైడ్రిక్ ఆల్కహాల్ (గ్లైకాల్)</span></div></td><td>Alcohol used in polyester creation. Example: Reacting with terephthalic acid / ఉదా: పాలిస్టర్ తయారీ ఆల్కహాల్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">49. Microfibers</span><span class="pronunciation-telugu">మైక్రోఫైబర్స్ (అతి సూక్ష్మ దారాలు)</span></div></td><td>Ultra-thin modern synthetic fibres. Example: Soft sportswear fabric / ఉదా: అత్యంత మృదువైన స్పోర్ట్స్ బట్టలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">50. Static Electricity</span><span class="pronunciation-telugu">స్టాటిక్ ఎలక్ట్రిసిటీ (స్థిర విద్యుత్)</span></div></td><td>Surface electrical charge accumulation. Example: Crackling nylon clothes / ఉదా: నైలాన్ బట్టలు విప్పేటప్పుడు వచ్చే చిటపట శబ్దం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">51. Dry Spinning</span><span class="pronunciation-telugu">డ్రై స్పిన్నింగ్ (పొడి వడకడం)</span></div></td><td>Spinning polymer dissolved in volatile solvent into warm air. Example: Acrylic fibre spinning / ఉదా: గాలిలో వేడి ద్వారా దారాలు గట్టిపడే పద్ధతి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">52. Wet Spinning</span><span class="pronunciation-telugu">వెట్ స్పిన్నింగ్ (తడి వడకడం)</span></div></td><td>Spinning polymer solution into coagulation bath. Example: Rayon precipitation / ఉదా: ద్రవంలోకి పంపి దారాలు తీసే విధానం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">53. Upholstery Fabric</span><span class="pronunciation-telugu">అప్‌హోల్స్టరీ ఫ్యాబ్రిక్ (కుర్చీలు, సోఫాల బట్ట)</span></div></td><td>Fabric for covering furniture. Example: Sofa covering material / ఉదా: సోఫాలు మరియు కుర్చీలకు కుట్టే గట్టి బట్ట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">54. Fleece</span><span class="pronunciation-telugu">ఫ్లీస్ (మృదువైన ఉన్ని వస్త్రం)</span></div></td><td>Soft knitted synthetic wool fabric. Example: Winter jacket fleece / ఉదా: శీతాకాలపు జాకెట్లలో ఉండే మృదువైన గుడ్డ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">55. Craft Yarns</span><span class="pronunciation-telugu">క్రాఫ్ట్ యార్న్స్ (చేతిపనుల దారాలు)</span></div></td><td>Yarns for knitting and craft. Example: Acrylic knitting wool / ఉదా: అద్దకాలు మరియు అల్కడానికి వాడే దారాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">56. Awnings</span><span class="pronunciation-telugu">అవ్నింగ్స్ (ఎండ తగలకుండా వేసే పరదాలు)</span></div></td><td>Canvas roof covers. Example: Shop sun shade fabric / ఉదా: దుకాణాల ముందు ఎండ తగలకుండా వేసే పరదాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">57. Vehicle Covers</span><span class="pronunciation-telugu">వెహికల్ కవర్స్ (వాహనాల కవర్లు)</span></div></td><td>Protective covers for cars/bikes. Example: Waterproof car cover / ఉదా: కార్లను వర్షం నుండి కప్పే వాటర్‌ప్రూఫ్ కవర్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">58. Sanitary Products</span><span class="pronunciation-telugu">సానిటరీ ప్రొడక్ట్స్ (ఆరోగ్య రక్షణ వస్తువులు)</span></div></td><td>Hygiene absorbent articles. Example: Diapers and bandages / ఉదా: పిల్లల డైపర్లు మరియు వైద్య బ్యాండేజీలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">59. Lints</span><span class="pronunciation-telugu">లింట్స్ (గాయాలకు కట్టే మెత్తని గుడ్డ పోగులు)</span></div></td><td>Soft material for wound dressing. Example: Medical lint bandage / ఉదా: గాయాలకు కట్టడానికి వాడే దూది పోగులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">60. Laundry Label Codes</span><span class="pronunciation-telugu">లాండ్రి లేబుల్ కోడ్స్ (బట్టల ఉతికే సూచనలు)</span></div></td><td>Symbols indicating washing instructions. Example: Iron temperature symbol / ఉదా: బట్టలపై ఉండే ఇస్త్రీ మరియు ఉతికే గుర్తులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">61. Utility Press</span><span class="pronunciation-telugu">యూటిలిటీ ప్రెస్ (ఇస్త్రీ చేసే విధానం)</span></div></td><td>Garment pressing instruction. Example: Low heat ironing / ఉదా: తక్కువ వేడితో ఇస్త్రీ చేయమని తెలిపే సూచన.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">62. Low Moisture</span><span class="pronunciation-telugu">లో మాయిశ్చర్ (తక్కువ తేమ సూచన)</span></div></td><td>Dry care instruction. Example: Avoiding steam iron / ఉదా: ఎక్కువ నీటి ఆవిరి వాడకూడదని తెలిపే పద్ధతి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">63. Elastane Lycra</span><span class="pronunciation-telugu">ఎలాస్టేన్ లైక్రా (సాగే గుణం ఉన్న దారం)</span></div></td><td>Stretchable spandex fiber blend. Example: Stretchy sports trousers / ఉదా: బాగా సాగే క్రీడా దుస్తులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">64. Carbonation</span><span class="pronunciation-telugu">కార్బనేషన్ (కార్బన్ డయాక్సైడ్ నింపుట)</span></div></td><td>Dissolving pressurized gas in drinks. Example: Soda fizz gas / ఉదా: శీతల పానీయాలలో గ్యాస్‌ను ఒత్తిడితో నింపడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">65. Linear Chains</span><span class="pronunciation-telugu">లీనియర్ చెయిన్స్ (సరళ గొలుసు నిర్మాణం)</span></div></td><td>Straight chain polymer arrangement. Example: Thermoplastic linear structure / ఉదా: వరుసగా అమరి ఉండే ప్లాస్టిక్ అణువులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">66. Cross-linked Chains</span><span class="pronunciation-telugu">క్రాస్-లింక్డ్ చెయిన్స్ (అడ్డంగా అనుసంధానించబడిన గొలుసులు)</span></div></td><td>Interconnected polymer chains. Example: Thermosetting plastic network / ఉదా: గట్టిగా అడ్డంగా బంధించబడిన ప్లాస్టిక్ అణువులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">67. Nitrated Cotton</span><span class="pronunciation-telugu">నైట్రేటడ్ కాటన్ (నైట్రిక్ ఆమ్లంతో తడిపిన పత్తి)</span></div></td><td>Cotton treated with nitric/sulfuric acid. Example: Parkes plastic base / ఉదా: రసాయనాలతో మార్పు చెందిన పత్తి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">68. Camphor</span><span class="pronunciation-telugu">కర్పూరం (కర్పూరం)</span></div></td><td>Elasticizer compound. Example: Parkesine additive / ఉదా: ప్లాస్టిక్‌ను మెత్తగా చేయడానికి వాడే కర్పూరం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">69. Thermal Stability</span><span class="pronunciation-telugu">థర్మల్ స్టెబిలిటీ (ఉష్ణ స్థిరత్వం)</span></div></td><td>Resistance to heat deformation. Example: Bakelite heat resistance / ఉదా: వేడికి రూపం మారకుండా ఉండే గుణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">70. Flame Test</span><span class="pronunciation-telugu">ఫ్లేమ్ టెస్ట్ (మంట పరీక్ష)</span></div></td><td>Testing plastic via burning behavior. Example: Identifying thermoplastics / ఉదా: మంటలో కాల్చి ప్లాస్టిక్ రకాన్ని గుర్తించడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">71. Non-reactive</span><span class="pronunciation-telugu">నాన్-రియాక్టివ్ (చర్య జరపని తత్వం)</span></div></td><td>Inert to chemicals and moisture. Example: Plastic acid container / ఉదా: రసాయనాలతో చర్య జరపని ప్లాస్టిక్ డబ్బా.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">72. Corrosion</span><span class="pronunciation-telugu">కొరోషన్ (తుప్పు పట్టడం / క్షీణత)</span></div></td><td>Metal degradation by atmosphere. Example: Iron gate rusting / ఉదా: గాలికి ఇనుప గేట్లు తుప్పు పట్టడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">73. Garbage Dumps</span><span class="pronunciation-telugu">గర్బేజ్ డంప్స్ (చెత్త కుప్పలు)</span></div></td><td>Municipal waste dumping grounds. Example: City garbage yard / ఉదా: నగరాల చెత్తను పారబోసే ప్రదేశం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">74. Postmortem</span><span class="pronunciation-telugu">పోస్ట్‌మార్టం (శవ పరీక్ష)</span></div></td><td>Medical autopsy examination. Example: Finding plastics in cow stomach / ఉదా: జంతువుల కడుపులో ప్లాస్టిక్ కనుగొనే పరీక్ష.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">75. Clogging Drains</span><span class="pronunciation-telugu">క్లాగింగ్ డ్రైన్స్ (మురుగు నీటి కాలువలు మూసుకుపోవడం)</span></div></td><td>Blockage in sewerage pipes. Example: Plastic bags choking drains / ఉదా: ప్లాస్టిక్ కవర్ల వల్ల కాలువలు పూడుకుపోవడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">76. Poisonous Fumes</span><span class="pronunciation-telugu">పాయిజనస్ ఫ్యూమ్స్ (విషపూరిత పొగలు)</span></div></td><td>Toxic smoke from burning synthetics. Example: Burning plastic smoke / ఉదా: ప్లాస్టిక్ కాలిస్తే వచ్చే హానికరమైన పొగ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">77. Use and Throw Culture</span><span class="pronunciation-telugu">యూజ్ అండ్ త్రో కల్చర్ (వాడిపారేసే సంస్కృతి)</span></div></td><td>Disposable product habit. Example: Plastic disposable plates / ఉదా: ఒక్కసారి వాడి పడేసే ప్లాస్టిక్ ప్లేట్ల వాడకం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">78. Chasing Arrows</span><span class="pronunciation-telugu">చేసింగ్ యారోస్ (తిరిగే బాణాల గుర్తు)</span></div></td><td>Recycling loop symbol icon. Example: Triangle recycling arrows / ఉదా: రీసైకిల్ చేయడానికి సూచించే బాణాల గుర్తు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">79. Commercially Viable</span><span class="pronunciation-telugu">కమర్షియల్లీ వైయబుల్ (వాణిజ్యపరంగా లాభసాటి అయినది)</span></div></td><td>Profitable large-scale recycling. Example: PET bottle recycling economics / ఉదా: పెద్ద ఎత్తున లాభం వచ్చే రీసైక్లింగ్ వ్యాపారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">80. Solid Waste Management</span><span class="pronunciation-telugu">సాలిడ్ వేస్ట్ మేనేజ్మెంట్ (ఘన వ్యర్థాల నిర్వహణ)</span></div></td><td>Systematic garbage disposal and recycling. Example: Municipal solid waste processing / ఉదా: చెత్తను శాస్త్రీయంగా వేరుచేసి రీసైకిల్ చేయడం.</td></tr>
+
+                <!-- Additional 80 Glossary Terms (81 to 160) -->
+                <tr><td><div class="term-container"><span class="eng-term">81. Monomer Unit</span><span class="pronunciation-telugu">మానోమర్ యూనిట్ (ఏక అణువు)</span></div></td><td>Building block of polymers. Example: Single ethylene molecule / ఉదా: పాలిమర్‌ను కట్టే చిన్న ఇటుక లాంటి అణువు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">82. Polymerization</span><span class="pronunciation-telugu">పాలిమరైజేషన్ (బహుమారక ప్రక్రియ)</span></div></td><td>Process of joining monomers. Example: Making polythene from ethylene / ఉదా: చిన్న అణువులను కలిపి పెద్ద పాలిమర్‌గా మార్చడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">83. Semi-synthetic Fibre</span><span class="pronunciation-telugu">సెమీ-సింథటిక్ ఫైబర్ (అర్ధ కృత్రిమ దారం)</span></div></td><td>Fibre from natural base plus chemicals. Example: Rayon from wood pulp / ఉదా: సహజ పదార్థానికి రసాయనాలు కలిపి చేసిన రేయాన్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">84. Cellulose Acetate</span><span class="pronunciation-telugu">సెల్యులోజ్ ఎసిటేట్ (సెల్యులోజ్ ఉత్పన్నం)</span></div></td><td>Chemical derivative of cellulose. Example: Photographic film base / ఉదా: కెమెరా ఫిల్మ్‌లలో వాడే పదార్థం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">85. Viscose Rayon</span><span class="pronunciation-telugu">విస్కోస్ రేయాన్ (విస్కోస్ రేయాన్)</span></div></td><td>Most common type of rayon. Example: Lining fabric of coats / ఉదా: కోట్లకు కుట్టే మృదువైన లోపలి గుడ్డ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">86. Cuprammonium Rayon</span><span class="pronunciation-telugu">క్యూప్రమోనియం రేయాన్ (క్యూప్రమోనియం పద్ధతి రేయాన్)</span></div></td><td>Rayon dissolved in copper-ammonia solution. Example: Fine textile threads / ఉదా: రాగి-అమ్మోనియా ద్రావణంలో చేసిన పట్టు దారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">87. Modal Fibre</span><span class="pronunciation-telugu">మోడల్ ఫైబర్ (మోడల్ రేయాన్ దారం)</span></div></td><td>High wet-strength rayon variety. Example: Soft undergarments / ఉదా: తడిచినా బలముండే ఒకరకమైన రేయాన్ బట్ట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">88. Lyocell</span><span class="pronunciation-telugu">లయోసెల్ (పర్యావరణ హిత రేయాన్)</span></div></td><td>Sustainable solvent-spun cellulose fibre. Example: Eco-friendly bedsheets / ఉదా: పర్యావరణానికి మేలు చేసే రేయాన్ రకం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">89. Polyamide-6,6</span><span class="pronunciation-telugu">పాలిమైడ్-6,6 (నైలాన్ రకం)</span></div></td><td>Common industrial nylon variant. Example: Heavy-duty mechanical gears / ఉదా: పారిశ్రామిక నైలాన్ రకం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">90. Aramid Fibre</span><span class="pronunciation-telugu">అరామిడ్ ఫైబర్ (అరామిడ్ బ్లడ్ ప్రూఫ్ దారం)</span></div></td><td>High-strength heat-resistant synthetic fibre. Example: Bulletproof vests (Kevlar) / ఉదా: బుల్లెట్ ప్రూఫ్ జాకెట్లలో వాడే గట్టి దారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">91. Kevlar</span><span class="pronunciation-telugu">కెవ్లర్ (కెవ్లర్ దారం)</span></div></td><td>Extremely strong aramid fibre brand. Example: Police protective vests / ఉదా: పోలీసుల రక్షణ కవచాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">92. Nomex</span><span class="pronunciation-telugu">నోమెక్స్ (అగ్ని నిరోధక దారం)</span></div></td><td>Flame-resistant meta-aramid fibre. Example: Firefighter safety suits / ఉదా: అగ్నిమాపక సిబ్బంది దుస్తులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">93. Polyethylene Terephthalate</span><span class="pronunciation-telugu">పాలిథీన్ టెరెఫ్తాలేట్ (పిఇటి)</span></div></td><td>Polyester resin plastic. Example: Mineral water bottles / ఉదా: మంచినీళ్ల ప్లాస్టిక్ బాటిల్స్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">94. Polybutylene Terephthalate</span><span class="pronunciation-telugu">పాలిబ్యుటిలీన్ టెరెఫ్తాలేట్ (పిబిటి)</span></div></td><td>Engineering thermoplastic polyester. Example: Electrical housing parts / ఉదా: విద్యుత్ పరికరాల బాక్సులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">95. Polycarbonate</span><span class="pronunciation-telugu">పాలికార్బోనేట్ (గట్టి పారదర్శక ప్లాస్టిక్)</span></div></td><td>Tough transparent engineering plastic. Example: Safety helmets and shields / ఉదా: హెల్మెట్ అద్దాలు, షీల్డ్స్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">96. Acrylic Glass (Plexiglass)</span><span class="pronunciation-telugu">అక్రిలిక్ గ్లాస్ (కృత్రిమ గాజు)</span></div></td><td>Transparent PMMA thermoplastic. Example: Aircraft windows / ఉదా: విమానాల కిటికీల అద్దాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">97. PMMA</span><span class="pronunciation-telugu">పిఎంఎంఎ (పాలిమిథైల్ మెథక్రిలేట్)</span></div></td><td>Polymethyl methacrylate plastic. Example: Dental dentures / ఉదా: కృత్రిమ దంతాల తయారీ ప్లాస్టిక్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">98. Polyurethane</span><span class="pronunciation-telugu">పాలియురేథేన్ (పాలియురేథేన్ నురగ/ప్లాస్టిక్)</span></div></td><td>Versatile polymer for foams and coatings. Example: Sofa cushion foam / ఉదా: సోఫాలలో వాడే మెత్తని నురగ (స్పాంజ్).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">99. Epoxy Resin</span><span class="pronunciation-telugu">ఎపాక్సీ రెసిన్ (ఎపాక్సీ జిగురు)</span></div></td><td>Strong thermosetting adhesive polymer. Example: Strong industrial glue / ఉదా: రెండు వస్తువులను గట్టిగా అంటించే గ్లూ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">100. Silicone Polymer</span><span class="pronunciation-telugu">సిలికాన్ పాలిమర్ (సిలికాన్ రబ్బరు/ద్రవం)</span></div></td><td>Heat-resistant silicone-based compound. Example: Baking spatula or sealant / ఉదా: వంట పాత్రల స్పూన్లు, వాటర్ ప్రూఫ్ సీలింగ్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">101. Fluoropolymer (Teflon)</span><span class="pronunciation-telugu">ఫ్లోరోపాలిమర్ (టెఫ్లాన్ / నాన్‌-స్టిక్ పూత)</span></div></td><td>Non-stick slippery fluorocarbon polymer. Example: Non-stick frying pan coating / ఉదా: అంటని వంట పాత్రల పూత (టెఫ్లాన్).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">102. PTFE</span><span class="pronunciation-telugu">పిటిఎఫ్‌ఇ (పాలిటెట్రాఫ్లోరోఇథిలీన్)</span></div></td><td>Chemical name for Teflon. Example: Chemical pipe lining / ఉదా: రసాయన పైపులలో వాడే పూత.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">103. Nylon-6</span><span class="pronunciation-telugu">నైలాన్-6 (నైలాన్ రకం-6)</span></div></td><td>Caprolactam-based synthetic polymer. Example: Fishing lines and bristles / ఉదా: చేపలు పట్టే దారాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">104. Modacrylic</span><span class="pronunciation-telugu">మోడాక్రిలిక్ (మంటను తట్టుకునే అక్రిలిక్)</span></div></td><td>Modified acrylic fire-retardant fibre. Example: Wigs and protective blankets / ఉదా: విగ్గులు మరియు రక్షణ దుప్పట్లు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">105. Spandex (Lycra)</span><span class="pronunciation-telugu">స్పాండెక్స్ / లైక్రా (అతిగా సాగే దారం)</span></div></td><td>Polyurethane-polyurea copolymer. Example: Swimwear and sportswear / ఉదా: ఈత కొట్టే దుస్తులు, సాగే ప్యాంట్లు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">106. Olefin Fibre</span><span class="pronunciation-telugu">ఒలిఫిన్ ఫైబర్ (పాలీప్రొపిలిన్ దారం)</span></div></td><td>Synthetic fibre from polyolefin. Example: Indoor-outdoor carpets / ఉదా: కార్పెట్లు మరియు మ్యాట్లు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">107. Vinyon</span><span class="pronunciation-telugu">విన్యన్ (వినైల్ క్లోరైడ్ దారం)</span></div></td><td>PVC-based synthetic textile fibre. Example: Flame-resistant filters / ఉదా: రక్షణ ఫిల్టర్లు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">108. Saran</span><span class="pronunciation-telugu">సారన్ (సారన్ ప్లాస్టిక్ ఫైబర్)</span></div></td><td>Polyvinylidene chloride polymer fibre. Example: Lawn furniture webbing / ఉదా: కుర్చీల వెడల్పాటి పట్టీలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">109. Chlorinated Polyethylene (CPE)</span><span class="pronunciation-telugu">క్లోరినేటెడ్ పాలిథీన్ (సిపిఇ)</span></div></td><td>Modified polyethylene elastomer. Example: Hose pipes and seals / ఉదా: రబ్బరు గొట్టాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">110. Ultra High Molecular Weight Polyethylene</span><span class="pronunciation-telugu">అల్ట్రా హై మాలిక్యులర్ వెయిట్ పాలిథీన్ (యూహెచ్‌ఎండబ్ల్యుపిఇ)</span></div></td><td>Extremely tough impact-resistant plastic. Example: Artificial hip joints / ఉదా: కృత్రిమ కీళ్ళ అమరికలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">111. ABS Plastic</span><span class="pronunciation-telugu">ఏబీఎస్ ప్లాస్టిక్ (అక్రిలోనిట్రైల్ బ్యూటాడైన్ స్టైరిన్)</span></div></td><td>Tough impact-resistant engineering polymer. Example: Lego toys and computer keyboard housing / ఉదా: లెగో ఆటవస్తువులు, కీబోర్డ్ బాక్సులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">112. ASA Plastic</span><span class="pronunciation-telugu">ఏఎస్ఏ ప్లాస్టిక్ (వాతావరణాన్ని తట్టుకునే ప్లాస్టిక్)</span></div></td><td>Weather-resistant engineering polymer. Example: Outdoor automobile mirror housings / ఉదా: కార్ల బయటి మిర్రర్ బాక్సులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">113. Bioplastic</span><span class="pronunciation-telugu">బైయోప్లాస్టిక్ (జీవ ప్లాస్టిక్)</span></div></td><td>Plastic derived from renewable biomass sources. Example: Cornstarch disposable cutlery / ఉదా: మొక్కల పిండితో చేసిన ప్లాస్టిక్ చెంచాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">114. PLA (Polylactic Acid)</span><span class="pronunciation-telugu">పిఎల్ఎ (పాలీలాక్టిక్ ఆమ్ల ప్లాస్టిక్)</span></div></td><td>Compostable thermoplastic derived from starch. Example: 3D printing filament / ఉదా: 3డి ప్రింటింగ్ దారాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">115. PHA (Polyhydroxyalkanoates)</span><span class="pronunciation-telugu">పిహెచ్‌ఎ (బ్యాక్టీరియా ప్లాస్టిక్)</span></div></td><td>Biodegradable polyester produced by bacteria. Example: Medical sutures / ఉదా: వైద్య రంగంలో కుట్లు వేసే దారాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">116. Oxo-biodegradable Plastic</span><span class="pronunciation-telugu">ఆక్సో-బైయో-డిగ్రేడబుల్ ప్లాస్టిక్ (ఆక్సిజన్‌తో క్షీణించే ప్లాస్టిక్)</span></div></td><td>Plastic with additive breaking down via oxidation. Example: Degradable grocery bags / ఉదా: త్వరగా ముక్కలయ్యే సంచులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">117. Elastomer</span><span class="pronunciation-telugu">ఎలాస్టోమర్ (సాగే గుణం ఉన్న రబ్బరు పదార్థం)</span></div></td><td>Polymer with viscoelasticity (rubber-like). Example: Elastic rubber band / ఉదా: రబ్బరు బ్యాండ్ లాంటి సాగే పదార్థం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">118. Thermoplastic Elastomer (TPE)</span><span class="pronunciation-telugu">థర్మోప్లాస్టిక్ ఎలాస్టోమర్ (టీపీఈ)</span></div></td><td>Copolymer with thermoplastic and rubber properties. Example: Toothbrush soft grips / ఉదా: టూత్ బ్రష్ హ్యాండిల్ రబ్బరు పట్టు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">119. Vulcanization</span><span class="pronunciation-telugu">వల్కనైజేషన్ (గట్టి రబ్బరు తయారీ ప్రక్రియ)</span></div></td><td>Process hardening rubber using sulfur heating. Example: Car tyre manufacturing / ఉదా: టైర్ల తయారీలో రబ్బరును గట్టిపరచడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">120. Plasticizer</span><span class="pronunciation-telugu">ప్లాస్టిసైజర్ (ప్లాస్టిక్‌ను మెత్తగా చేసే రసాయనం)</span></div></td><td>Additive increasing flexibility of plastics. Example: Soft plastic toy additive / ఉదా: ప్లాస్టిక్‌కు మెత్తదనాన్నిచ్చే రసాయనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">121. Flame Retardant</span><span class="pronunciation-telugu">ఫ్లేమ్ రిటార్డెంట్ (మంటను ఆపే రసాయనం)</span></div></td><td>Chemical additive suppressing combustion. Example: Fireproof upholstery spray / ఉదా: మంట అంటుకోకుండా ఆపే రసాయనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">122. UV Stabilizer</span><span class="pronunciation-telugu">యువి స్టెబిలైజర్ (సూర్యరశ్మి నుండి కాపాడే రసాయనం)</span></div></td><td>Additive preventing sunlight degradation. Example: Outdoor plastic chair additive / ఉదా: ఎండకు ప్లాస్టిక్ పాడవకుండా చేసే రసాయనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">123. Antistatic Agent</span><span class="pronunciation-telugu">యాంటీస్టాటిక్ ఏజెంట్ (స్థిర విద్యుత్ నిరోధక రసాయనం)</span></div></td><td>Additive reducing static electricity buildup. Example: Electronic packaging plastic additive / ఉదా: కరెంట్ ఆవహించకుండా చేసే రసాయనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">124. Pigment (Plastic)</span><span class="pronunciation-telugu">పిగ్మెంట్ (ప్లాస్టిక్ రంగు పదార్థం)</span></div></td><td>Coloring agent added to polymer melts. Example: Red bucket coloring powder / ఉదా: ప్లాస్టిక్‌కు రంగునిచ్చే పొడి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">125. Filler (Plastic)</span><span class="pronunciation-telugu">ఫిల్లర్ (ఘన నింపే పదార్థం)</span></div></td><td>Inert material added to reduce resin cost. Example: Calcium carbonate in PVC pipes / ఉదా: ఖర్చు తగ్గించడానికి కలిపే సున్నపు పొడి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">126. Blowing Agent</span><span class="pronunciation-telugu">బ్లోయింగ్ ఏజెంట్ (నురగను సృష్టించే రసాయనం)</span></div></td><td>Gas-producing chemical creating plastic foam. Example: Expanded polystyrene foam cup / ఉదా: స్పంజ్ లేదా నురగ తయారీ రసాయనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">127. Extrusion Molding</span><span class="pronunciation-telugu">ఎక్స్‌‌ట్రూషన్ మోల్డింగ్ (గొట్టాల తయారీ విధానం)</span></div></td><td>Manufacturing continuous profiles by forcing melted plastic through a die. Example: Plastic water pipe extrusion / ఉదా: ప్లాస్టిక్ పైపులను నిరంతరంగా తయారు చేసే పద్ధతి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">128. Injection Molding</span><span class="pronunciation-telugu">ఇంజెక్షన్ మోల్డింగ్ (అచ్చు పోసే విధానం)</span></div></td><td>Injecting molten plastic into a closed mould. Example: Plastic bucket manufacturing / ఉదా: అచ్చులలో ద్రవ ప్లాస్టిక్ పోసి వస్తువులు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">129. Blow Molding</span><span class="pronunciation-telugu">బ్లో మోల్డింగ్ (గాలి ఊది బాటిల్ చేసే విధానం)</span></div></td><td>Inflating a hollow plastic tube inside a mould. Example: PET water bottle production / ఉదా: గాలి ఊది ప్లాస్టిక్ బాటిల్స్ తయారు చేసే పద్ధతి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">130. Rotational Molding</span><span class="pronunciation-telugu">రొటేషనల్ మోల్డింగ్ (భ్రమణ అచ్చు విధానం)</span></div></td><td>Rotating mould with plastic powder in oven. Example: Large water storage tanks / ఉదా: పెద్ద నీటి ట్యాంకుల తయారీ పద్ధతి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">131. Thermoforming</span><span class="pronunciation-telugu">థర్మోఫార్మింగ్ (వేడి చేసి ఆకారంలోకి మార్చుట)</span></div></td><td>Heating plastic sheet and shaping over mould. Example: Disposable plastic fruit trays / ఉదా: వేడి చేసిన ప్లాస్టిక్ రేకులను అచ్చులో నొక్కడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">132. Compression Molding</span><span class="pronunciation-telugu">కంప్రెషన్ మోల్డింగ్ (పీడన అచ్చు విధానం)</span></div></td><td>Squeezing material in heated mould. Example: Bakelite electrical switches / ఉదా: ఒత్తిడి ద్వారా బెలకైట్ స్విచ్‌లు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">133. Transfer Molding</span><span class="pronunciation-telugu">ట్రాన్స్‌ఫర్ మోల్డింగ్ (బదిలీ అచ్చు విధానం)</span></div></td><td>Plunger forcing resin into closed mould cavity. Example: Complex electronic microchip casings / ఉదా: సంక్లిష్టమైన ఎలక్ట్రానిక్ బాక్సులు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">134. Calendering</span><span class="pronunciation-telugu">కెలెండరింగ్ (చదునైన రేకులు చేసే విధానం)</span></div></td><td>Passing polymer through rollers to form thin sheets. Example: Vinyl tablecloth sheet / ఉదా: ప్లాస్టిక్ రేకులు లేదా షీట్లు తయారు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">135. Filament Winding</span><span class="pronunciation-telugu">ఫిలమెంట్ వైండింగ్ (దారాలు చుట్టి గొట్టాలు చేసే విధానం)</span></div></td><td>Winding resin-soaked fibers over rotating mandrel. Example: High-pressure chemical tanks / ఉదా: దారాలు చుట్టి గట్టి ట్యాంకులు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">136. Vacuum Forming</span><span class="pronunciation-telugu">వ్యాక్యూమ్ ఫార్మింగ్ (పీడన శూన్య అచ్చు విధానం)</span></div></td><td>Shaping plastic sheet via vacuum suction. Example: Plastic refrigerator inner liners / ఉదా: శూన్య పీడనంతో ప్లాస్టిక్ రేకులను వంచడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">137. Polymer Degradation</span><span class="pronunciation-telugu">పాలిమర్ డిగ్రేడేషన్ (పాలిమర్ క్షీణత)</span></div></td><td>Loss of polymer properties over time. Example: Brittle old plastic bucket / ఉదా: ప్లాస్టిక్ వస్తువులు ఎండకు పగిలిపోవడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">138. Photo-degradation</span><span class="pronunciation-telugu">ఫోటో-డిగ్రేడేషన్ (కాంతి వల్ల ప్లాస్టిక్ క్షీణత)</span></div></td><td>Degradation caused by ultraviolet light absorption. Example: Sun-bleached brittle plastic chair / ఉదా: సూర్యరశ్మి వల్ల ప్లాస్టిక్ పాడవటం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">139. Thermal Degradation</span><span class="pronunciation-telugu">థర్మల్ డిగ్రేడేషన్ (వేడి వల్ల పాలిమర్ దెబ్బతినుట)</span></div></td><td>Polymer breakdown at excessive temperatures. Example: Scorched melting plastic handle / ఉదా: అధిక వేడికి ప్లాస్టిక్ కాలిపోవడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">140. Hydrolytic Degradation</span><span class="pronunciation-telugu">హైడ్రోలైటిక్ డిగ్రేడేషన్ (నీటి ద్వారా పాలిమర్ క్షీణత)</span></div></td><td>Polymer breakdown in presence of water. Example: Degraded underwater plastic component / ఉదా: నీటిలో నాని ప్లాస్టిక్ దెబ్బతినడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">141. Mechanical Recycling</span><span class="pronunciation-telugu">మెకానికల్ రీసైక్లింగ్ (యాంత్రిక పునర్వినియోగం)</span></div></td><td>Melting and re-granulating waste plastic. Example: Making pellets from old bottles / ఉదా: ప్లాస్టిక్‌ను కరిగించి చిన్న గుళికలుగా మార్చడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">142. Chemical Recycling</span><span class="pronunciation-telugu">కెమికల్ రీసైక్లింగ్ (రసాయన పునర్వినియోగం)</span></div></td><td>Breaking down polymers into original monomers. Example: Depolymerizing PET back to base chemicals / ఉదా: ప్లాస్టిక్‌ను రసాయనాలతో విడగొట్టి మళ్లీ ముడి పదార్థం చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">143. Feedstock Recycling</span><span class="pronunciation-telugu">ఫీడ్‌స్టాక్ రీసైక్లింగ్ (ముడి వస్తువుల పునర్వినియోగం)</span></div></td><td>Converting plastic waste into refinery petrochemical feedstocks. Example: Pyrolysis oil from plastic / ఉదా: ప్లాస్టిక్ నుండి ఇంధన నూనెను తీయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">144. Energy Recovery</span><span class="pronunciation-telugu">ఎనర్జీ రికవరీ (శక్తి పునరుద్ధరణ)</span></div></td><td>Generating electricity by burning waste plastic safely. Example: Waste-to-energy municipal incineration / ఉదా: ప్లాస్టిక్ చెత్తను కాల్చి విద్యుత్ ఉత్పత్తి చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">145. Upcycling</span><span class="pronunciation-telugu">అప్‌సైక్లింగ్ (ఉన్నత పునర్వినియోగం)</span></div></td><td>Transforming plastic waste into higher-value products. Example: Plastic bottle vertical garden planters / ఉదా: ప్లాస్టిక్ బాటిళ్లతో అందమైన మొక్కల కుండీలు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">146. Downcycling</span><span class="pronunciation-telugu">డౌన్‌సైక్లింగ్ (తక్కువ విలువైన వస్తువులుగా మార్చుట)</span></div></td><td>Recycling into lower-quality products. Example: Plastic bottles into park benches / ఉదా: ప్లాస్టిక్‌ను తక్కువ గ్రేడ్ వస్తువులుగా మార్చడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">147. Virgin Polymer</span><span class="pronunciation-telugu">విర్జిన్ పాలిమర్ (అసలైన సరికొత్త ప్లాస్టిక్)</span></div></td><td>Freshly synthesized plastic without recycled content. Example: Brand new medical syringe plastic / ఉదా: ఎలాంటి రీసైక్లింగ్ చేయని సరికొత్త ప్లాస్టిక్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">148. Recycled Polymer</span><span class="pronunciation-telugu">రీసైకిల్డ్ పాలిమర్ (పునర్వినియోగ ప్లాస్టిక్)</span></div></td><td>Polymer processed from post-consumer plastic waste. Example: Recycled trash bin plastic / ఉదా: పాత ప్లాస్టిక్‌ను కరిగించి తయారు చేసిన పదార్థం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">149. Microplastics</span><span class="pronunciation-telugu">మైక్రోప్లాస్టిక్స్ (అతి సూక్ష్మ ప్లాస్టిక్ కణాలు)</span></div></td><td>Tiny plastic particles less than 5mm in size. Example: Plastic dust in ocean water / ఉదా: సముద్రపు నీటిలో తిరిగే అతి చిన్న ప్లాస్టిక్ రేణువులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">150. Nanoplastics</span><span class="pronunciation-telugu">న్యానోప్లాస్టిక్స్ (న్యానో స్థాయి ప్లాస్టిక్ అణువులు)</span></div></td><td>Plastic fragments smaller than 1 micrometer. Example: Airborne synthetic fabric dust / ఉదా: కంటికి కనిపించని అతి సూక్ష్మ ప్లాస్టిక్ భాగాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">151. Great Pacific Garbage Patch</span><span class="pronunciation-telugu">గ్రేట్ పసిఫిక్ గర్బేజ్ ప్యాచ్ (పసిఫిక్ మహాసముద్రపు చెత్త దీవి)</span></div></td><td>Massive accumulation of marine plastic waste in the ocean. Example: North Pacific plastic vortex / ఉదా: సముద్రంలో పేరుకుపోయిన భారీ ప్లాస్టిక్ చెత్త కుప్ప.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">152. Ghost Fishing Nets</span><span class="pronunciation-telugu">ఘోస్ట్ ఫిషింగ్ నెట్స్ (సముద్రంలో వదిలేసిన దయ్యపు వలలు)</span></div></td><td>Abandoned synthetic fishing nets trapping marine life. Example: Lost nylon fishnets killing sea turtles / ఉదా: సముద్రంలో వదిలేసిన నైలాన్ వలలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">153. Extended Producer Responsibility (EPR)</span><span class="pronunciation-telugu">ఎక్స్‌టెండెడ్ ప్రొడ్యూసర్ రెస్పాన్సిబిలిటీ (ఉత్పత్తిదారుల బాధ్యత)</span></div></td><td>Manufacturer responsibility for plastic waste collection. Example: Company recycling quota rules / ఉదా: ప్లాస్టిక్ తయారు చేసే కంపెనీల వ్యర్థ సేకరణ బాధ్యత.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">154. Single-use Plastics</span><span class="pronunciation-telugu">సింగిల్-యూజ్ ప్లాస్టిక్స్ (ఒక్కసారి వాడి పడేసే ప్లాస్టిక్)</span></div></td><td>Disposable plastics used once and discarded. Example: Plastic straws and cutlery / ఉదా: స్ట్రాలు, కప్పులు వంటి ఒక్కసారి వాడే ప్లాస్టిక్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">155. Plastic Bag Ban</span><span class="pronunciation-telugu">ప్లాస్టిక్ బ్యాగ్ బాన్ (ప్లాస్టిక్ సంచుల నిషేధం)</span></div></td><td>Government restriction on thin carry bags. Example: State-wide thin polythene ban / ఉదా: పలుచని ప్లాస్టిక్ కవర్లపై ప్రభుత్వ నిషేధం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">156. Biopolymer</span><span class="pronunciation-telugu">బైయోపాలిమర్ (జీవ పాలిమర్)</span></div></td><td>Polymers produced by living organisms. Example: Natural starch or cellulose / ఉదా: మొక్కలు మరియు జీవుల నుండి లభించే పాలిమర్లు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">157. Green Chemistry</span><span class="pronunciation-telugu">గ్రీన్ కెమిస్ట్రీ (హరిత రసాయన శాస్త్రం)</span></div></td><td>Designing chemical products minimizing hazardous substances. Example: Eco-friendly plastic synthesis / ఉదా: హానికర రసాయనాలు లేని పర్యావరణ అనుకూల తయారీ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">158. Circular Economy</span><span class="pronunciation-telugu">సర్క్యులర్ ఎకానమీ (చక్రీయ ఆర్థిక వ్యవస్థ)</span></div></td><td>Economic system eliminating waste via continuous recycling. Example: Zero-waste manufacturing loop / ఉదా: చెత్త లేకుండా ప్రతిదీ తిరిగి వాడుకునే ఆర్థిక వ్యవస్థ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">159. Leachate</span><span class="pronunciation-telugu">లీచాట్ (చెత్త కుప్పల నుండి కారే విషపూరిత ద్రవం)</span></div></td><td>Toxic liquid draining from landfill garbage dumps. Example: Landfill polluted runoff water / ఉదా: చెత్త కుప్పల నుండి భూమిలోకి ఇంకే కలుషిత ద్రవం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">160. Environmental Hazard</span><span class="pronunciation-telugu">ఎన్విరాన్‌మెంటల్ హజార్డ్ (పర్యావరణ ముప్పు)</span></div></td><td>Substances causing ecological damage. Example: Unrecycled plastic pollution threat / ఉదా: ప్రకృతికి మరియు జీవులకు కలిగే ముప్పు.</td></tr>
+            </table>
+        </div>
+
+        <!-- ================= CHAPTER 3: COMPLETE EXERCISES (REFLECTIONS, APPS, HOTS, MCQS, PROJECTS & EXPERIMENTS) ================= -->
+        <div id="ch3-exercises" class="card">
+            <h1>Chapter 3: Complete "Improve Your Learning" Exercises, Solutions & Suggested Experiments</h1>
+            
+            <h2>Reflections on Concepts (సరికాని భావనల ప్రతిబింబాలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">1. Why some fibres are called Synthetic? Explain. (AS1)</p>
+                <p><strong>Answer:</strong> Synthetic fibres are called so because they are not found naturally in plants or animals. Instead, they are artificially synthesized by human beings in industries using raw petrochemical materials derived from petroleum.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> కృత్రిమ దారాలు మొక్కలు లేదా జంతువుల నుండి సహజంగా లభించవు. వీటిని పరిశ్రమలలో పెట్రోలియం రసాయనాల నుండి మానవులే కృత్రిమంగా తయారు చేస్తారు కాబట్టి వీటిని సింథటిక్ లేదా కృత్రిమ దారాలు అంటారు.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">2. What are thermosetting plastics. Give two examples. (AS1)</p>
+                <p><strong>Answer:</strong> Thermosetting plastics are synthetic polymers that once moulded into a specific shape cannot be softened or remelted by heating, because strong cross-links are established during their initial moulding process. Examples: Bakelite and Melamine.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> థర్మోసెట్టింగ్ ప్లాస్టిక్స్ అంటే ఒకసారి అచ్చు పోసి గట్టిపడ్డాక, తిరిగి వేడి చేసినా కరగని ప్లాస్టిక్స్. వీటి తయారీలో బలమైన అడ్డపు బంధాలు ఏర్పడతాయి. ఉదాహరణకు: బెలకైట్ మరియు మెలమైన్.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">3. Give reasons: "Why plastic containers are used as storing devices." (AS1)</p>
+                <p><strong>Answer:</strong> Plastic containers are widely preferred for storage because plastics are non-reactive (they do not rust or corrode when in contact with moisture, air, or acids), lightweight, highly durable, strong, waterproof, and economical compared to metals.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> ప్లాస్టిక్ డబ్బాలు తేమతో, గాలితో లేదా ఆమ్లాలతో చర్య జరపవు (నాన్-రియాక్టివ్). ఇవి చాలా తేలికైనవి, తుప్పు పట్టవు, బలంగా మరియు చౌకగా ఉంటాయి కాబట్టి నిల్వ చేయడానికి ఉత్తమమైనవి.</div>
+            </div>
+
+            <h2>Application of Concepts (భావనల అనువర్తనాలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">1. How synthetic fibres have changed our daily life? (AS1)</p>
+                <p><strong>Answer:</strong> Synthetic fibres have transformed our daily life by offering wrinkle-free, easily washable, highly durable, and affordable clothing options. They have also provided essential industrial materials like strong ropes, fishing nets, parachutes, and medical bandages that outperform natural fibres.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> నైలాన్, పాలిస్టర్ వంటి కృత్రిమ దారాలు తక్కువ ధరలో, ముడతలు పడకుండా, సులభంగా ఉతికే బట్టలను అందించాయి. అలాగే త్రాళ్లు, పారాచూట్లు, ఫిషింగ్ నెట్లు వంటి పారిశ్రామిక వస్తువులుగా మన జీవితాలను సులభతరం చేశాయి.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">2. What would happen, if we make electric switches with thermoplastics? (AS2)</p>
+                <p><strong>Answer:</strong> If electrical switches were made from thermoplastics, they would soften, melt, and deform easily due to the heat generated during electrical current flow or minor sparking, creating severe fire hazards and short-circuit risks.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> థర్మోప్లాస్టిక్‌లతో ఎలక్ట్రిక్ స్విచ్‌లు తయారు చేస్తే, కరెంట్ ప్రవహించేటప్పుడు లేదా చిన్న స్పార్క్ వచ్చినప్పుడు పుట్టే వేడికి అవి వెంటనే కరిగిపోయి షార్ట్ సర్క్యూట్ మరియు అగ్నిప్రమాదాలకు దారితీస్తాయి.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">3. What could be the consequences if plastics are not properly disposed? (AS7)</p>
+                <p><strong>Answer:</strong> Improper disposal of plastic waste causes severe environmental hazards including choking of urban sewerage systems and drains, soil degradation, water pollution, accidental ingestion by stray cattle leading to fatal intestinal blockages, and toxic air pollution from open burning.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> ప్లాస్టిక్‌ను సరైన పద్ధతిలో పారవేయకపోతే కాలువలు పూడిపోతాయి, నేల మరియు నీరు కలుషితమవుతాయి, వీధి జంతువులు వీటిని తిని ప్రాణాలు కోల్పోతాయి మరియు కాలిస్తే విషపూరిత వాయువులు వస్తాయి.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">4. Rani wants to buy clothes for her parents for winter wear. What types of clothes would you suggest? Specify reasons. (AS7)</p>
+                <p><strong>Answer:</strong> I would suggest winter garments made of Acrylic or blended wool (like terriwool). Acrylic is a synthetic artificial wool that provides excellent thermal insulation, is lightweight, durable, and significantly cheaper and more accessible than pure natural wool.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> రానికి నేను అక్ర్రిలిక్ (కృత్రిమ ఉన్ని) లేదా టెర్రిఉన్ని బట్టలను సూచిస్తాను. ఇవి సహజ ఉన్ని వలె శరీరాన్ని వెచ్చగా ఉంచుతాయి, తేలికగా ఉంటాయి మరియు అందరికీ అందుబాటు ధరలో లభిస్తాయి.</div>
+            </div>
+
+            <h2>Higher Order Thinking Questions (ఉన్నత స్థాయి ఆలోచనా ప్రశ్నలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">1. What made human beings search for alternatives to natural fibres? (AS2)</p>
+                <p><strong>Answer:</strong> Rapid population growth, scarcity and high cost of natural fibres like silk and wool, complicated agricultural harvesting processes, and the industrial demand for stronger, waterproof, elastic, and weather-resistant materials prompted the invention of synthetic fibres.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> జనాభా విపరీతంగా పెరగడం, సహజ దారాల (పట్టు, ఉన్ని) ఉత్పత్తి పరిమితంగా ఉండటం మరియు ధర ఎక్కువగా ఉండటంతో, శాస్త్రవేత్తలు బలంగా, వాటర్‌ప్రూఫ్‌గా ఉండే కృత్రిమ దారాల కోసం వెతకాల్సి వచ్చింది.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">2. Imagine what would happen if we do not discover plastics? (AS2)</p>
+                <p><strong>Answer:</strong> Without the discovery of plastics, modern civilization would still depend heavily on wood, glass, leather, and heavy metals. This would result in massive deforestation, exorbitant manufacturing expenses, bulky household appliances, and severe constraints in electrical insulation, packaging, and medical technology.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> ప్లాస్టిక్ కనుగొనకపోతే మనం పూర్తిగా చెట్లు, గాజు మరియు లోహాలపైనే ఆధారపడాల్సి వచ్చేది. దీనివల్ల అడవులు నరికివేయడం పెరిగిపోయేది, వస్తువులు బరువుగా ఉండేవి మరియు వైద్య, ఎలక్ట్రానిక్స్ రంగాలలో అభివృద్ధి మందగించేది.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">3. Indiscriminate usage of plastic is a serious threat to biodiversity. What are the efforts of Government and Non-government organizations in this regard? (AS7)</p>
+                <p><strong>Answer:</strong> Governments have implemented bans on ultra-thin polythene carry bags, mandated extended producer responsibility (EPR), and promoted municipal waste recycling programs. NGOs actively conduct environmental awareness rallies, distribute cloth bags, organize cleanup drives, and advocate for sustainable zero-waste policies.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> పలుచని ప్లాస్టిక్ కవర్లను ప్రభుత్వాలు నిషేధించాయి మరియు రీసైక్లింగ్ నియమాలను అమలు చేస్తున్నాయి. ఎన్జీఓలు ప్రజల్లో అవగాహన సదస్సులు నిర్వహిస్తూ, గుడ్డ సంచుల వాడకాన్ని ప్రోత్సహిస్తున్నాయి.</div>
+            </div>
+
+            <h2 id="ch3-hots-mcq">Multiple Choice Questions (బహుళైచ్ఛిక ప్రశ్నలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">1. Rayon is prepared by</p>
+                <p>a) Coal &nbsp;&nbsp;&nbsp;&nbsp; b) Oxygen &nbsp;&nbsp;&nbsp;&nbsp; c) Fibre &nbsp;&nbsp;&nbsp;&nbsp; d) Cellulose</p>
+                <p><strong>Answer: d) Cellulose</strong></p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> రేయాన్ మొక్కల సెల్యులోజ్ (కర్ర గుజ్జు) నుండి తయారు చేయబడుతుంది.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">2. Necessity of labels on clothes</p>
+                <p>a) Required by law &nbsp;&nbsp;&nbsp;&nbsp; b) To identify fabric content &nbsp;&nbsp;&nbsp;&nbsp; c) Both A and B &nbsp;&nbsp;&nbsp;&nbsp; d) They do not decompose</p>
+                <p><strong>Answer: b) To identify fabric content</strong></p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> బట్టలపై ఉన్న లేబుల్స్ ఆ వస్త్రం ఏ రకమైన దారాలతో తయారైందో తెలుసుకోవడానికి ఉపయోగపడతాయి.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">3. The material which is not decomposed by natural process is called</p>
+                <p>a) Non bio-degradable material &nbsp;&nbsp;&nbsp;&nbsp; b) Bio-degradable material &nbsp;&nbsp;&nbsp;&nbsp; c) Polyester &nbsp;&nbsp;&nbsp;&nbsp; d) Nylon</p>
+                <p><strong>Answer: a) Non bio-degradable material</strong></p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> సహజ పద్ధతిలో సూక్ష్మజీవుల ద్వారా కుళ్ళిపోని పదార్థాలను నాన్-బైయో-డిగ్రేడబుల్ అంటారు.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">4. The symbol representing recycling code 4 represents</p>
+                <p>a) PET &nbsp;&nbsp;&nbsp;&nbsp; b) HDPE &nbsp;&nbsp;&nbsp;&nbsp; c) LDPE &nbsp;&nbsp;&nbsp;&nbsp; d) Others</p>
+                <p><strong>Answer: c) LDPE</strong></p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> రీసైక్లింగ్ కోడ్ 4 అనేది అల్ప సాంద్రత పాలిథీన్ (LDPE) ప్లాస్టిక్‌ను సూచిస్తుంది.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">5. Which is a natural fibre among the following</p>
+                <p>a) Rayon &nbsp;&nbsp;&nbsp;&nbsp; b) Nylon &nbsp;&nbsp;&nbsp;&nbsp; c) Polyester &nbsp;&nbsp;&nbsp;&nbsp; d) Silk</p>
+                <p><strong>Answer: d) Silk</strong></p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> ఇచ్చిన వాటిలో పట్టు (Silk) అనేది పట్టు పురుగుల నుండి లభించే సహజ దారం.</div>
+            </div>
+
+            <h2 id="ch3-experiments">Suggested Experiments (సూచించిన ప్రయోగాలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">Experiment 1: Conduct a flame test to identify Thermoplastics and Thermosetting plastics.</p>
+                <p><strong>Aim & Procedure:</strong> Take small pieces of plastic samples (comb, toothbrush handle, utensil handle, electric switch, melamine plate, mug) using tongs and bring them near a spirit lamp flame. Observe whether they soften and melt (thermoplastic) or char/burn with pungent smell without melting (thermosetting plastic).</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> వివిధ ప్లాస్టిక్ నమూనాలను (దువ్వెన, స్విచ్, హ్యాండిల్ మొదలైనవి) పట్టుకారుతో పట్టుకుని మంటపై ఉంచాలి. అవి కరిగిపోతే థర్మోప్లాస్టిక్ అని, కరగకుండా కాలిపోతే థర్మోసెట్టింగ్ ప్లాస్టిక్ అని గుర్తించవచ్చు.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">Experiment 2: Flame test classification of threads (Wool, Silk, Cotton, Nylon, Sweater thread, Umbrella cloth, Rope).</p>
+                <p><strong>Aim & Procedure:</strong> Unravel various threads and hold them to a flame using tweezers. Observe the burning behavior and smell: burning hair smell indicates wool/silk (natural protein); burning paper smell indicates cotton/rayon (cellulose); melting and shrinking in flame indicates synthetic fibres like nylon or polyester.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> వివిధ రకాల దారాలను మంట వద్ద ఉంచి వచ్చే వాసన మరియు కరిగే విధానాన్ని బట్టి వాటిని సహజ దారాలుగా (కాలిపోయిన జుట్టు లేదా కాగితం వాసన) మరియు కృత్రిమ దారాలుగా (కరిగిపోయేవి) వర్గీకరించాలి.</div>
+            </div>
+
+            <h2 id="ch3-projects">Suggested Projects (సూచించిన ప్రాజెక్టులు)</h2>
+
+            <div class="qa-box">
+                <p class="question">Project 1: Prepare a table of various synthetic fibres which are used to make household articles from them.</p>
+                <p><strong>Guidelines & Table Structure:</strong> Create a structured chart listing synthetic fibres like Nylon, Polyester, Acrylic, and Rayon along with their everyday household and industrial applications such as ropes, toothbrushes, carpets, and bedsheets.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> వివిధ కృత్రిమ దారాలు (నైలాన్, పాలిస్టర్, అక్ర్రిలిక్, రేయాన్) మరియు వాటితో తయారయ్యే గృహోపకరణాల జాబితాతో ఒక చక్కని పట్టికను తయారు చేయాలి.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">Project 2: Collect the figures made up of thermosetting, thermoplastics used in your daily life and make a poster.</p>
+                <p><strong>Guidelines & Poster Structure:</strong> Cut out pictures or draw common plastic items found at home (combs, toothbrushes, electrical switchboards, melamine plates, buckets) and paste them on a chart paper, classifying them into thermoplastics and thermosetting plastics.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> మన ఇంట్లో వాడే థర్మోప్లాస్టిక్ మరియు థర్మోసెట్టింగ్ ప్లాస్టిక్ వస్తువుల చిత్రాలను సేకరించి చార్ట్‌పై అంటించి పోస్టర్ తయారు చేయాలి.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">Project 3: Prepare a chart explaining recycling codes, full names, acronyms, and uses of plastics.</p>
+                <p><strong>Guidelines & Chart Structure:</strong> Design a colorful chart displaying resin identification codes 1 to 7 with their full technical names (PET, HDPE, PVC, LDPE, PP, PS, Other), recycling status, and typical household products made from them.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> ప్లాస్టిక్ రీసైక్లింగ్ కోడ్‌లు (1 నుండి 7 వరకు), వాటి పూర్తి పేర్లు, సంక్షిప్త రూపాలు మరియు వాటి ఉపయోకాలను వివరించే ఒక వర్ణభరితమైన చార్ట్ తయారు చేయాలి.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()" title="Scroll to top">↑</button>
+
+    <script>
+        let timerInterval;
+        let secondsElapsed = 0;
+
+        function submitVisitorLogin() {
+            const name = document.getElementById('visitorName').value.trim();
+            const roll = document.getElementById('visitorRoll').value.trim();
+
+            if (!name || !roll) {
+                alert('Please enter both your name and roll number to proceed.');
+                return;
+            }
+
+            const school = "JACOB GAPP SCHOOL";
+
+            // Display info in session bar
+            document.getElementById('showName').textContent = name;
+            document.getElementById('showRoll').textContent = roll;
+
+            // Hide overlay and show main content
+            document.getElementById('visitor-overlay').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+
+            // Log session start and send report to balaswamysm@gmail.com (simulated tracking)
+            console.log(`[Visitor Tracking] School: ${school}, Name: ${name}, Roll: ${roll}, Time: ${new Date().toISOString()}`);
+
+            // Start timer
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                document.getElementById('timerCounter').textContent = secondsElapsed;
+            }, 1000);
+        }
+
+        // Scroll to Top logic
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
